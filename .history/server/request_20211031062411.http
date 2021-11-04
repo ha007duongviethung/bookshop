@@ -1,0 +1,22 @@
+GET http://localhost:305/api/book
+
+###
+GET http://localhost:305/api/book/1
+
+###
+POST http://localhost:305/api/book
+content-type: application/json
+
+{
+    "name": "Đời ngắn đừng ngủ dài",
+    "img": "https://sitanguyen.com/wp-content/uploads/2020/02/sach-doi-ngan-dung-ngu-dai.png",
+    "author": "Robin Sharma",
+    "pb_company": "Trẻ",
+    "type": "Phát triển bản thân"
+}
+
+###
+PATCH http://localhost:305/api/book/2
+
+###
+DELETE http://localhost:305/api/book/3

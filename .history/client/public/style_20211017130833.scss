@@ -1,0 +1,161 @@
+header {
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  .nav {
+    padding: 3px 0;
+    .logo {
+      height: 50px;
+    }
+
+    .shopping {
+      position: relative;
+      display: inline;
+      .shopping-amount {
+        min-width: 22px;
+        height: 22px;
+        top: 2px;
+        right: -8px;
+        position: absolute;
+        color: #fff;
+        line-height: 24.8px;
+        text-align: center;
+        border-radius: 16px;
+        background-color: #3e5962;
+        font-family: Lato !important;
+        font-size: 14.2px;
+        font-weight: bold;
+        display: inline;
+      }
+    }
+  }
+}
+
+.form-control,
+.btn {
+  font-size: 1.1rem;
+}
+
+.home {
+  margin-top: 66px;
+  .home-background {
+    img {
+      width: 100%;
+      max-height: 700px;
+      object-fit: cover;
+    }
+  }
+
+  .name-page {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    padding-top: 1.25rem;
+    z-index: 2;
+    li.active {
+      color: #42464a;
+    }
+  }
+
+  .title {
+    border-bottom: 4px solid #de3242;
+    display: inline-block;
+    h2 {
+      font-size: 30px;
+      span {
+        color: #de3242;
+      }
+    }
+  }
+
+  .card {
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    .card-img {
+      position: relative;
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+      }
+
+      .quick-add {
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        bottom: 0;
+        display: none;
+        a {
+          text-decoration: none;
+          display: block;
+          text-align: center;
+          padding: 4px;
+          color: #3d6bb5;
+          font-weight: bold;
+          text-transform: uppercase;
+          border: 2px solid #3d6bb5;
+          margin: 10px;
+        }
+      }
+
+      &:hover .quick-add {
+        display: block;
+        animation: quickAdd ease-in-out 0.4s;
+      }
+    }
+  }
+
+  .middle-background {
+    img {
+      width: 100%;
+    }
+  }
+
+  .bn-button {
+    bottom: -50px;
+    margin: 0;
+    .bn-control {
+      height: 0;
+      position: relative;
+      margin: 0 50px;
+      .bn-run {
+        display: inline-block;
+        border: 1px solid #111;
+        padding: 5px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .bn-img {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .home-background {
+    img {
+      height: 700px;
+    }
+  }
+}
+
+@keyframes quickAdd {
+  from {
+    bottom: -35px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}

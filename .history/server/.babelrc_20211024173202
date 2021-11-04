@@ -1,0 +1,10 @@
+{
+    "presets": [
+        "@bable/preset-env"
+    ],
+    "env": {
+        "test": {
+          "presets": ["env"]
+        }
+      }
+}

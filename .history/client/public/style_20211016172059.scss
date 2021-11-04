@@ -1,0 +1,101 @@
+header {
+  font-size: 1.2rem;
+}
+
+header {
+  .logo {
+    height: 50px;
+  }
+}
+
+.form-control,
+.btn {
+  font-size: 1.1rem;
+}
+
+.home {
+  .name-page {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    padding-top: 1.25rem;
+    z-index: 2;
+    li.active {
+      color: #42464a;
+    }
+  }
+
+  .title {
+    h2 {
+      font-size: 30px;
+      span {
+        color: #de3242;
+      }
+    }
+  }
+
+  .card {
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    .card-img {
+      position: relative;
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+      }
+
+      .quick-add {
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        // bottom: 0;
+        display: none;
+        a {
+          text-decoration: none;
+          display: block;
+          text-align: center;
+          padding: 3px;
+          color: #3d6bb5;
+          font-weight: bold;
+          text-transform: uppercase;
+          border: 2px solid #3d6bb5;
+        }
+      }
+
+      &:hover .quick-add {
+        display: block;
+        // animation: quickAdd ease-in-out 0.3s;
+        top: 50%;
+      }
+    }
+  }
+
+  .home-background {
+    img {
+      width: 100%;
+      max-height: 700px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-background {
+    img {
+      height: 700px;
+    }
+  }
+}
+
+@keyframes quickAdd {
+  from {
+    bottom: -35px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}

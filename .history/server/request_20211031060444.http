@@ -1,0 +1,9 @@
+GET http://localhost:305/api/book
+
+###
+GET http://localhost:305/api/book/1
+
+###
+POST http://localhost:305/api/book
+
+###

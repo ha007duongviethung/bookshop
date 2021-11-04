@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "test serve",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "main": "app.js",
+  "author": "Heroes Pluss",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

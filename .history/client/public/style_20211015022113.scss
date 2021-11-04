@@ -1,0 +1,30 @@
+body {
+  font-size: 1.1rem;
+}
+
+header {
+  .logo {
+    height: 40px;
+  }
+}
+
+.home {
+  .name-page {
+    margin-left: 24px;
+  }
+
+  .title {
+    text-align: center;
+
+    h2 {
+      font-size: 35px;
+      span {
+        color: #de3242;
+      }
+    }
+
+    h5 {
+      color: #7b7b7b;
+    }
+  }
+}
