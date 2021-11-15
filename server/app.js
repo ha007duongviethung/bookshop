@@ -2,26 +2,33 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
+// const bodyParser = require('body-parser')
 const book = require('./routes/book')
 const user = require('./routes/user')
+const cart = require('./routes/cart')
 
 const app = express()
 const port = process.env.PORT || 2507
 
 app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json({ limit: '50mb' }))
+app.use(express.urlencoded({ extended: true, limit: '50mb' }))
 app.use(express.static("uploads"))
 
 mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: true,
+    useFindAndModify: false,
     useCreateIndex: true
 }).then(() => console.log('Connected to the database!'))
-.catch((err) => console.log(err))
+.catch(
+    (err) => {
+        console.log(err)
+        process.exit()
+    })
 
 app.use('/api/book', book)
 app.use('/api/user', user)
+app.use('/api/cart', cart)
 
 app.listen(port, () => console.log(`Server running at http://localhost:${port}`))
