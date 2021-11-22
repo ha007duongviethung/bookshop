@@ -7,7 +7,6 @@ const book = require('./routes/book')
 const user = require('./routes/user')
 const cart = require('./routes/cart')
 const address = require('./routes/address')
-const invoice = require('./routes/invoice')
 
 const app = express()
 const port = process.env.PORT || 2507
@@ -33,6 +32,5 @@ app.use('/api/book', book)
 app.use('/api/user', user)
 app.use('/api/cart', cart)
 app.use('/api/address', address)
-app.use('/api/invoice', invoice)
 
 app.listen(port, () => console.log(`Server running at http://localhost:${port}`))

@@ -1,5 +1,4 @@
 const Cart = require('../models/carts')
-const fs = require('fs')
 
 module.exports = class CartAPI {
     // @router GET api/book/
